@@ -12,7 +12,7 @@ Simple tool for converting the vic database from json format to txt format
 To use this tool from the command line, run the following command:
 
 ```sh
-./vic2txt.exe -input(-i) %userprofile%/Desktop/database.json(filepath) -output(-o) %userprofile%/Desktop//Desktop/(directory)
+./vic2txt.exe -input(-i) %userprofile%/Desktop/database.json(filepath) -output(-o) %userprofile%/Desktop/(directory)
 ```
 
 Replace `database.json` with the appropriate values.
@@ -27,4 +27,4 @@ go-winres make
 go build -ldflags "-s -w" --trimpath -o vic2txt.exe
 ```
 
-This command will generate a standalone executable file for Decrypt-FVEK.
+This command will generate a standalone executable file for vic2txt.
