@@ -19,7 +19,7 @@ func main() {
 	// help function
 	parser.HelpFunc = func(c *argparse.Command, msg interface{}) string {
 		var help string
-		help += fmt.Sprintf("./vic2txt.exe -input(-i) %userprofile%/Desktop/DeviceDatabase.json(filepath) -output(-o) %userprofile%/Desktop//Desktop/(directory)")
+		help += fmt.Sprintf("./vic2txt.exe -input(-i) C:/Users/User/Desktop/vic_database.json(filepath) -output(-o) C:/Users/User/Desktop/(directory)")
 		return help
 	}
 
@@ -36,7 +36,7 @@ func main() {
 
 	// creating an infinite progress bar
 	s := spinner.New(spinner.CharSets[43], 100*time.Millisecond)
-	s.Suffix = " ...Conversion in progress...\n"
+	s.Suffix = " ...Conversion in progress..."
 	s.Start()
 
 	// parsing arguments

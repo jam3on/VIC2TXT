@@ -10,7 +10,7 @@ import (
 )
 
 // Declaration of the structure of the JSON provided by the VIC database
-type MediaResponse struct {
+type VicData struct {
 	Context string `json:"@odata.context"`
 	Value   []VIC  `json:"value"`
 }
@@ -46,14 +46,14 @@ func readerJson(inFile string) []VIC {
 	}
 	defer document.Close()
 
-	var response MediaResponse
+	var data VicData
 	decoder := json.NewDecoder(document)
-	err = decoder.Decode(&response)
+	err = decoder.Decode(&data)
 	if err != nil {
 		fmt.Println("Error decoding JSON:", err)
 		return nil
 	}
-	return response.Value
+	return data.Value
 }
 
 // Function to write hashes to a file
